@@ -4,6 +4,7 @@ import './index.scss';
 
 function App() {
   const [fromCurrency, setFromCurrency] = React.useState('RUB');
+  const [toCurrency, setToCurrency] = React.useState('USD');
   const [rates, setRates] = React.useState({});
 
   React.useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Block value={0} currency={fromCurrency} onChangeCurrency={setFromCurrency} />
-      <Block value={0} currency="USD" />
+      <Block value={0} currency={toCurrency} onChangeCurrency={setToCurrency} />
     </div>
   );
 }
